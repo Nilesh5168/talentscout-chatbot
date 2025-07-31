@@ -4,54 +4,53 @@
 
 **TalentScout Hiring Assistant** is a conversational AI tool designed to assist recruiters and hiring teams by automatically generating tailored technical interview questions based on a candidate’s profile. The assistant collects details like position, experience, and tech stack, and generates skill-specific questions using a large language model (LLM) hosted on OpenRouter. It also supports follow-up queries, context handling, and graceful exits.
 
-🛠️ Installation Instructions
+🛠️ Installation Instructions-
 
-1. Clone the Repository
+1. Clone the Repository:
 
-git clone https://github.com/Nilesh5168/talentscout-chatbot.git
+   git clone https://github.com/Nilesh5168/talentscout-chatbot.git
 
-cd talentscout-chatbot
+   cd talentscout-chatbot
 
-2. Create a Virtual Environment (Recommended)
+2. Create a Virtual Environment (Recommended):
 
-python -m venv venv
+   python -m venv venv
 
-# On Windows:
-venv\Scripts\activate
+   venv\Scripts\activate
 
 
 3. Install Dependencies
 
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 4. Run the Streamlit App
 
-streamlit run app.py
+   streamlit run app.py
 
 5. Configure OpenRouter API Key
 
-Open prompts.py and replace the API key placeholder:
+   Open prompts.py and replace the API key placeholder:
 
-OPENROUTER_API_KEY = "sk-..."  # Replace with your OpenRouter key
+   OPENROUTER_API_KEY = "sk-..."  # Replace with your OpenRouter key
 
 
 🧑‍💻 Usage Guide
 
-Open the app in your browser (it will launch automatically after running).
+   Open the app in your browser (it will launch automatically after running).
 
-Enter candidate information:
+   Enter candidate information:
 
-Full Name
+   Full Name
 
-Email
+   Email
 
-Phone
+   Phone
 
-Years of Experience
+   Years of Experience
 
-Desired Position
+   Desired Position
 
-Tech Stack (comma-separated)
+   Tech Stack (comma-separated)
 
 Click Start Chat to receive technical questions.
 
@@ -66,18 +65,18 @@ Type exit, bye, or stop to end the chat.
 
 Architecture
 
-Frontend: Streamlit UI for candidate data input and interactive chat
+  Frontend: Streamlit UI for candidate data input and interactive chat
 
-Backend: Python script using HTTP API calls
+  Backend: Python script using HTTP API calls
 
-Model: google/gemma-3-4b-it:free via OpenRouter.ai
+  Model: google/gemma-3-4b-it:free via OpenRouter.ai
 
 
 Libraries Used
 
-streamlit: Provides the chat interface and input forms.
+  streamlit: Provides the chat interface and input forms.
 
-httpx: Makes secure HTTP requests to the OpenRouter API.
+  httpx: Makes secure HTTP requests to the OpenRouter API.
 
 
 
@@ -86,11 +85,11 @@ httpx: Makes secure HTTP requests to the OpenRouter API.
 
 Prompts are crafted to adapt dynamically to the candidate's input:
 
-Initial Prompting:
-The system generates targeted technical questions by analyzing the user's listed technologies and grouping 3–5 skill-based questions per technology.
+  Initial Prompting:
+  The system generates targeted technical questions by analyzing the user's listed technologies and grouping 3–5 skill-based questions per technology.
 
-Follow-up Chat Prompts:
-Inputs from the user are passed directly to the LLM in an ongoing conversational format. Context is preserved, allowing follow-up questions to remain relevant. Exit detection is handled via command keywords.
+  Follow-up Chat Prompts:
+  Inputs from the user are passed directly to the LLM in an ongoing conversational format. Context is preserved, allowing follow-up questions to remain relevant. Exit detection is handled via command keywords.
 
 
 🧩 Challenges & Solutions
