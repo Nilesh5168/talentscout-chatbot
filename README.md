@@ -9,6 +9,7 @@
 1. Clone the Repository
 
 git clone https://github.com/Nilesh5168/talentscout-chatbot.git
+
 cd talentscout-chatbot
 
 2. Create a Virtual Environment (Recommended)
@@ -17,8 +18,7 @@ python -m venv venv
 
 # On Windows:
 venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
+
 
 3. Install Dependencies
 
